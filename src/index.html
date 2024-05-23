@@ -4,12 +4,20 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<form class="main-form">
+		<form class="main-form" novalidate>
 			<div class="form-email">
 				<label for="email">Email:</label>
-				<input type="text" name="user_email" id="email" />
+				<input
+					type="email"
+					name="user_email"
+					id="email"
+					required
+					minlength="8"
+				/>
+				<span class="email-error" aria-live="polite"></span>
 			</div>
 			<div class="form-country">
 				<label for="country">Country:</label>
@@ -518,6 +526,7 @@
 					name="user_password_confirm"
 					id="passwordConfirm"
 				/>
+				<button type="submit">Submit</button>
 			</div>
 		</form>
 	</body>
